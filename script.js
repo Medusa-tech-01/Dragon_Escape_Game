@@ -51,7 +51,10 @@ setInterval(() => {
         // gameover.style.visibility = 'visible';
         enemy.classList.remove('animateEnemy')
         updateScore(score - 1);
-        gameoveraudio.play();
+        setTimeout(() => {
+            gameoveraudio.play();
+        }, 2000);
+        
         // setInterval(() => {
         gameplay.pause();
         // }, 1000);
