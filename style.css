@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gamecontainer{
+    background-image: url(img/forest1.jpg);
+    /* background-image: url(/img/autumn.jpg); */
+    /* background-image: url(/img/desert.jpg); */
+    /* background-image: url(/img/galaxy.jpg); */
+    /* background-image: url(/img/citylife.jpg); */
+    /* background-image: url(/img/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.warrier{
+    background-image: url(img/warrier6.png);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    bottom: 0px;
+    left: 120px;
+}
+
+.enemy{
+    background-image: url(img/dragon1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.animateWarrier{
+    animation: warrier 0.6s linear;
+}
+
+@keyframes warrier{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 300px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.animateEnemy{
+    animation: enemy 3s linear infinite;
+}
+
+@keyframes enemy{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+
+.gameover{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'River Adventurer';
+}
+
+#scorecont{
+    font-size: 25px;
+    font-weight: bolder;
+    border: 4px solid black;
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    padding: 10px 10px;
+    font-family: 'River Adventurer';
+}
+
+/* Dropdown */
+.container{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    margin: 20px 40px;   
+    height: 267px;
+    width: 182px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.dropbtn{
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Ubuntu Mono', monospace;
+}
+.dropbtn:hover{
+    background-color: rgb(82, 77, 77);
+}
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgba(64, 218, 13, 0.664);
+    min-width: 160px;
+    overflow: auto;
+    z-index: 2;
+    box-shadow: 0px 15px 16px 0px rgba(0,0,0,0.8);
+    
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 10px;
+    cursor: pointer;
+
+}
+.dropdown-content a:hover{
+    background-color: rgb(99, 131, 139);
+}
+.show{
+    display: block;
+}
+
+.reload{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-size: 25px;
+    font-family: 'River Adventurer';
+    padding: 10px 10px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+}

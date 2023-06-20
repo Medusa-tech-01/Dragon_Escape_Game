@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Escape</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="gamecontainer">
+        <div class="container">
+            <div class="dropdown">
+                <button onclick="showDropdown()" class="dropbtn">Change Theme</button>
+                <div id="mydropdown" class="dropdown-content">
+                    <a onclick="changeTheme('forest1')">Forest Theme</a>
+                    <a onclick="changeTheme('autumn')">Autumn Theme</a>
+                    <a onclick="changeTheme('desert')">Desert Theme</a>
+                    <a onclick="changeTheme('galaxy')">Galaxy Theme</a>
+                    <a onclick="changeTheme('citylife')">CityLife Theme</a>
+                    <a onclick="changeTheme('snow')">Snow Theme</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="scorecont">Your Score is: 0</div>
+        <button class="reload" onclick="reloadGame()">Play Again</button>
+        <div class="gameover">Welcome to Dragon Escape</div>
+        <div class="warrier"></div>
+        <div class="enemy animateEnemy"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
